@@ -1,0 +1,60 @@
+#from random import randint
+
+
+##def InputNumbers(inputText):
+#    a = False
+#    while not a:
+#        try:
+#            number = int(input(f"{inputText}"))
+#            a = True
+#        except ValueError:
+#            print("Какое-то неправильное число!")
+#    return number
+
+
+#def fill_list(diap):
+#    target_list = []
+#    for i in range(diap):
+#        target_list.append(randint(-diap, diap))
+#    return target_list
+
+
+#def check_list(num, diap, target_list):
+#    if -diap < num < diap:
+#        for b in target_list:
+#            if b == num:
+#                print("Yes")
+#                break
+#        else:
+#            print("No")
+#    else:
+#        print("число вне пределов ")
+
+
+#diapazon = InputNumbers("Введите диапазон (от -х до +х) и он же размер списка: ")
+
+#target_list = fill_list(diapazon)
+
+#print(target_list)
+
+#check_number = InputNumbers("Введите проверяемое число: ")
+
+#check_list(check_number, diapazon + 1, target_list)
+
+test_list = ["qwe", "asd", "zxc", "qwe", "ertqwe"]
+print(f"список: {test_list}")
+test_item = input("Введите искомую строку: ")
+
+
+def check_list(test_list, test_item):
+    count = 0
+    for i in range(len(test_list)):
+        if test_list[i] == test_item:
+            count += 1
+            if count == 2:
+                return i
+    else:
+        return -1
+
+
+print(f"Вуаля: {check_list(test_list, test_item)}")
